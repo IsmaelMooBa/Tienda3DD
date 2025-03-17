@@ -1,0 +1,132 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente más legible */
+}
+
+/* Estilos generales para el navbar */
+.navbar {
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilo para el botón del carrito */
+.navbar-button.cart-button {
+    background-color: #ff4757; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.navbar-button.cart-button:hover {
+    background-color: #ff6b81; /* Color de fondo al pasar el mouse */
+}
+
+.cart-icon {
+    width: 20px; /* Tamaño del ícono */
+    height: 20px;
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+}
+
+/* Estilos para los botones de navegación */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-button {
+    color: #1f2937;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem; /* Más espacio alrededor del texto */
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-button:hover {
+    color: #1f2937; /* Color gris-900 */
+    border-bottom-color: #ef4444; /* Color rojo-500 */
+}
+
+/* Estilos para el logo y el texto a la derecha */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 3.5rem; /* Aumenta el tamaño de la imagen */
+    width: auto;
+    margin-right: 1rem; /* Más espacio entre la imagen y el texto */
+    border-radius: 0.5rem; /* Bordes ligeramente redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+}
+
+.navbar-logo span {
+    font-size: 1.5rem;
+    font-weight: 700; /* Más grueso */
+    color: #374151;
+}
+
+/* Raya roja en la parte inferior del navbar */
+.navbar-red-line {
+    border-bottom: 2px solid #ef4444; /* Color rojo-500 */
+}
+
+/* Estilos para el contenedor principal */
+.home-container {
+    padding: 3rem 0; /* py-12 */
+    max-width: 1280px; /* max-w-7xl */
+    margin: 0 auto; /* mx-auto */
+    padding-left: 1rem; /* sm:px-6 */
+    padding-right: 1rem; /* sm:px-6 */
+}
+
+/* Estilos para el contenido */
+.home-content {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem; /* sm:px-6 */
+    font-size: 1.125rem; /* Tamaño de texto más grande */
+}
+
+/* Estilos para la tarjeta */
+.home-card {
+    background-color: white; /* bg-white */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-sm */
+    border-radius: 0.5rem; /* sm:rounded-lg */
+    overflow: hidden; /* overflow-hidden */
+}
+
+/* Estilos para el contenido de la tarjeta */
+.home-card-content {
+    padding: 1.5rem; /* p-6 */
+    background-color: white; /* bg-white */
+    border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+    font-size: 1.125rem; /* Tamaño de texto más grande */
+}
+
+.home-content, .home-card-content {
+    font-size: 1.125rem;
+    line-height: 1.6; /* Mejor interlineado */
+}
