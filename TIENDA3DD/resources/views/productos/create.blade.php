@@ -1,24 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Crear Producto</h1>
+<div class="container">
+    <h1>Crear Producto</h1>
 
-<form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
-    @csrf
-    <label>Nombre:</label>
-    <input type="text" name="nombre" required>
+    <form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data" class="product-form">
+        @csrf
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" required>
+        </div>
 
-    <label>Marca:</label>
-    <input type="text" name="marca" required>
+        <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" class="form-input" required>
+        </div>
 
-    <label>Precio:</label>
-    <input type="number" name="precio" step="0.01" required>
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" class="form-input" required>
+        </div>
 
-    <label>Imagen:</label>
-    <input type="file" name="imagen">
+        <div class="form-group">
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" class="form-input">
+        </div>
 
-    <button type="submit">Guardar</button>
-</form>
+        <button type="submit" class="btn-guardar">Guardar</button>
+    </form>
 
-<a href="{{ route('productos.index') }}">Volver a la lista</a>
+    <a href="{{ route('productos.index') }}" class="btn-volver">Volver a la lista</a>
+</div>
 @endsection

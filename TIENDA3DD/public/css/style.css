@@ -1,5 +1,7 @@
 body {
-    font-family: 'Roboto', sans-serif; /* Fuente más legible */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #1f2937;
 }
 
 /* Estilos generales para el navbar */
@@ -10,22 +12,22 @@ body {
 
 /* Estilo para el botón del carrito */
 .navbar-button.cart-button {
-    background-color: #ff4757; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 15px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ff4757;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre el ícono y el texto */
-    text-decoration: none; /* Quitar subrayado */
+    gap: 8px;
+    text-decoration: none;
 }
 
 .navbar-button.cart-button:hover {
-    background-color: #ff6b81; /* Color de fondo al pasar el mouse */
+    background-color: #ff6b81;
 }
 
 .cart-icon {
-    width: 20px; /* Tamaño del ícono */
+    width: 20px;
     height: 20px;
 }
 
@@ -50,7 +52,7 @@ body {
 .navbar-button {
     color: #1f2937;
     text-decoration: none;
-    padding: 0.75rem 1.25rem; /* Más espacio alrededor del texto */
+    padding: 0.75rem 1.25rem;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.6;
@@ -59,8 +61,8 @@ body {
 }
 
 .navbar-button:hover {
-    color: #1f2937; /* Color gris-900 */
-    border-bottom-color: #ef4444; /* Color rojo-500 */
+    color: #1f2937;
+    border-bottom-color: #ef4444;
 }
 
 /* Estilos para el logo y el texto a la derecha */
@@ -70,63 +72,305 @@ body {
 }
 
 .navbar-logo img {
-    height: 3.5rem; /* Aumenta el tamaño de la imagen */
+    height: 3.5rem;
     width: auto;
-    margin-right: 1rem; /* Más espacio entre la imagen y el texto */
-    border-radius: 0.5rem; /* Bordes ligeramente redondeados */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo img:hover {
-    transform: scale(1.05); /* Efecto de escala al hacer hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-logo span {
     font-size: 1.5rem;
-    font-weight: 700; /* Más grueso */
+    font-weight: 700;
     color: #374151;
 }
 
 /* Raya roja en la parte inferior del navbar */
 .navbar-red-line {
-    border-bottom: 2px solid #ef4444; /* Color rojo-500 */
+    border-bottom: 2px solid #ef4444;
 }
 
 /* Estilos para el contenedor principal */
-.home-container {
-    padding: 3rem 0; /* py-12 */
-    max-width: 1280px; /* max-w-7xl */
-    margin: 0 auto; /* mx-auto */
-    padding-left: 1rem; /* sm:px-6 */
-    padding-right: 1rem; /* sm:px-6 */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el contenido */
-.home-content {
-    padding-left: 1.5rem; /* sm:px-6 */
-    padding-right: 1.5rem; /* sm:px-6 */
-    font-size: 1.125rem; /* Tamaño de texto más grande */
+/* Estilos para el título de la lista de productos */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ef4444;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-/* Estilos para la tarjeta */
-.home-card {
-    background-color: white; /* bg-white */
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-sm */
-    border-radius: 0.5rem; /* sm:rounded-lg */
-    overflow: hidden; /* overflow-hidden */
+/* Estilos para el botón de crear producto */
+.create-product-button {
+    display: inline-block;
+    background-color: #ef4444;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilos para el contenido de la tarjeta */
-.home-card-content {
-    padding: 1.5rem; /* p-6 */
-    background-color: white; /* bg-white */
-    border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
-    font-size: 1.125rem; /* Tamaño de texto más grande */
+.create-product-button:hover {
+    background-color: #dc2626;
 }
 
-.home-content, .home-card-content {
-    font-size: 1.125rem;
-    line-height: 1.6; /* Mejor interlineado */
+/* Estilos para cada producto en la lista */
+.product-item {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el nombre del producto */
+.product-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para los detalles del producto (marca y precio) */
+.product-item p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+/* Estilos para los botones de acción (Ver, Editar, Eliminar) */
+.product-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.product-actions a, .product-actions button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.product-actions a {
+    background-color: #ef4444;
+    color: white;
+}
+
+.product-actions a:hover {
+    background-color: #dc2626;
+}
+
+.product-actions button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product-actions button:hover {
+    background-color: #b91c1c;
+}
+
+/* Estilos para el formulario */
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Estilos para las etiquetas */
+.form-group label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* Estilos para los inputs */
+.form-input {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    color: #1f2937;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    outline: none;
+}
+
+/* Estilos para el botón de guardar */
+.btn-guardar {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-guardar:hover {
+    background-color: #dc2626;
+}
+
+/* Estilos para el botón de volver */
+.btn-volver {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.btn-volver:hover {
+    color: #dc2626;
+}
+
+/* Estilos para el botón de actualizar */
+.btn-actualizar {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-actualizar:hover {
+    background-color: #dc2626;
+}
+
+/* Estilos para los detalles del producto */
+.product-details {
+    margin-bottom: 2rem;
+}
+
+.product-details h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.product-details p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+.product-details p strong {
+    color: #1f2937;
+}
+
+/* Estilos para la imagen del producto */
+.product-image {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para las acciones del producto */
+.product-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Estilos base para los botones de acción */
+.btn-base {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-volver {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-volver:hover {
+    background-color: #dc2626;
+}
+
+.btn-editar {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #2563eb;
+}
+
+.btn-eliminar {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+}
+
+.btn-eliminar:hover {
+    background-color: #b91c1c;
+}
+
+/* Estilos para el formulario de eliminación */
+.delete-form {
+    margin: 0;
 }
