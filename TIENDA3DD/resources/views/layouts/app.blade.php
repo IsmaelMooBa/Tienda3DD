@@ -24,7 +24,10 @@
 
             <!-- Carrito de compras a la derecha -->
             <div class="navbar-cart">
-                <!-- Eliminar el enlace al carrito de compras -->
+                <a href="{{ route('cart.index') }}" class="navbar-button cart-button">
+                    <img src="{{ asset('images/carrito_compras.png') }}" class="cart-icon" alt="Carrito">
+                    Carrito
+                </a>
             </div>
         </div>
         <!-- Raya roja en la parte inferior -->

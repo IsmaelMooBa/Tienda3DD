@@ -19,6 +19,11 @@
                     @method('DELETE')
                     <button type="submit" class="btn-eliminar">Eliminar</button>
                 </form>
+                <form action="{{ route('cart.add', $producto) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn-agregar">Agregar al Carrito</button>
+                </form>
+                
             </div>
         </div>
     @endforeach
