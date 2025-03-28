@@ -9,10 +9,12 @@ use App\Models\Producto;
 class CartController extends Controller
 {
     // Añadir producto al carrito
-    public function add(Request $request, Producto $producto)
+    public function add(Request $request, $producto_id)
     {
+        $producto = Producto::findOrFail($producto_id);
+    
         $cartItem = Cart::where('producto_id', $producto->id)->first();
-
+    
         if ($cartItem) {
             $cartItem->increment('cantidad');
         } else {
@@ -21,16 +23,21 @@ class CartController extends Controller
                 'cantidad' => 1
             ]);
         }
-
+    
         return redirect()->route('cart.index')->with('success', 'Producto agregado al carrito');
     }
+    
 
     // Mostrar el carrito
     public function index()
     {
+        // Eliminar productos del carrito que no existan en la tabla productos
+        Cart::whereNotIn('producto_id', Producto::pluck('id'))->delete();
+    
         $carrito = Cart::with('producto')->get();
         return view('cart.index', compact('carrito'));
     }
+    
 
     // Eliminar producto del carrito
     public function remove($id)
