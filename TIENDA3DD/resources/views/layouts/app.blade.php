@@ -17,13 +17,16 @@
                 </a>
             </div>
 
-            <!-- Botones en el centro -->
+            <!-- Botones en el centro (manteniendo los enlaces) -->
             <div class="navbar-buttons">
-                <!-- Eliminar los enlaces a 'users' y 'adminss' -->
+                <!-- Puedes agregar más botones aquí si lo necesitas -->
             </div>
 
-            <!-- Carrito de compras a la derecha -->
-            <div class="navbar-cart">
+            <!-- Sección de la derecha con carrito y agregar producto -->
+            <div class="navbar-right">
+                <a href="{{ route('productos.create') }}" class="navbar-button add-product-button">
+                    Agregar Producto
+                </a>
                 <a href="{{ route('cart.index') }}" class="navbar-button cart-button">
                     <img src="{{ asset('images/carrito_compras.png') }}" class="cart-icon" alt="Carrito">
                     Carrito
