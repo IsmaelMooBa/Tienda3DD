@@ -11,4 +11,4 @@ Route::resource('productos', ProductoController::class);
 Route::post('/cart/add/{producto}', [CartController::class, 'add'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
-
+Route::post('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
