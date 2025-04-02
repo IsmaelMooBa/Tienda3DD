@@ -25,7 +25,7 @@
                 <p class="product-price">${{ number_format($producto->precio, 2) }}</p>
             </div>
             
-            <!-- Botones de acción (EXACTAMENTE COMO LOS TENÍAS) -->
+           
             <div class="product-actions">
                 <a href="{{ route('productos.show', $producto) }}" class="btn-ver">Ver</a>
                 <a href="{{ route('productos.edit', $producto) }}" class="btn-editar">Editar</a>

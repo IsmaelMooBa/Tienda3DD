@@ -27,8 +27,8 @@
         </div>
 
         <button type="submit" class="btn-guardar">Guardar</button>
+        <a href="{{ route('productos.index') }}" class="btn-volver">Volver a la lista</a>
     </form>
 
-    <a href="{{ route('productos.index') }}" class="btn-volver">Volver a la lista</a>
 </div>
 @endsection

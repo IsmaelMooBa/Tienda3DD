@@ -36,6 +36,7 @@
             <form action="{{ route('cart.checkout') }}" method="POST" class="checkout-form">
                 @csrf
                 <button type="submit" class="btn-comprar">Comprar ahora</button>
+                <a href="{{ route('productos.index') }}" class="btn-volver">Volver a Productos</a>
             </form>
         </div>
     </div>
@@ -45,6 +46,5 @@
     </div>
     @endif
 
-    <a href="{{ route('productos.index') }}" class="btn-volver">Volver a Productos</a>
 </div>
 @endsection
