@@ -17,15 +17,15 @@
         @endif
     </div>
 
-    <div class="product-actions">
-        <a href="{{ route('productos.index') }}" class="btn-volver">Volver a la lista</a>
-        <a href="{{ route('productos.edit', $producto) }}" class="btn-editar">Editar</a>
-
-        <form action="{{ route('productos.destroy', $producto) }}" method="POST" class="delete-form">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn-eliminar">Eliminar</button>
-        </form>
+    <div class="product-detail-actions">
+                <a href="{{ route('productos.index') }}" class="btn-volver">Volver a la lista</a>
+                <a href="{{ route('productos.edit', $producto) }}" class="btn-editar">Editar</a>
+                
+                <form action="{{ route('productos.destroy', $producto) }}" method="POST" class="delete-form">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn-eliminar">Eliminar</button>
+                </form>
     </div>
 </div>
 @endsection
